@@ -1,27 +1,59 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="container">
+    <CompositionAPI1 />
+    <CompositionAPI2 />
+    <CompositionAPI3 />
+    <ProvideInject1Parent />
+    <Teleport1 />
+    <Teleport2 />
+    <GlobalState />
+    <GlobalState />
+    <SWR1 />
+    <SWR1 />
+    <SWR2 />
+    <SWR2 />
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import { defineComponent } from 'vue'
+import CompositionAPI1 from './components/CompositionAPI1.vue'
+import CompositionAPI2 from './components/CompositionAPI2.vue'
+import CompositionAPI3 from './components/CompositionAPI3.vue'
+import ProvideInject1Parent from './components/ProvideInject1Parent.vue'
+import Teleport1 from './components/Teleport1.vue'
+import Teleport2 from './components/Teleport2.vue'
+import SWR1 from './components/SWR1.vue'
+import SWR2 from './components/SWR2.vue'
+import GlobalState from './components/GlobalState.vue'
 
 export default defineComponent({
-  name: 'App',
   components: {
-    HelloWorld
+    CompositionAPI1,
+    CompositionAPI2,
+    CompositionAPI3,
+    ProvideInject1Parent,
+    Teleport1,
+    Teleport2,
+    SWR1,
+    SWR2,
+    GlobalState
   }
-});
+})
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="css">
+body {
+  margin: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 </style>
